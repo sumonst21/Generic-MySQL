@@ -2,3 +2,9 @@ UPDATE    targetTable t,
           sourceTable s
 SET       targetTable.targetColumn = sourceTable.sourceColumn
 WHERE     t.matchingColumn = s.matchingColumn
+
+/*
+LIMIT is not allowed when the UPDATE has joins.
+For the multiple-table syntax, UPDATE updates rows in each table named in table_references that satisfy the conditions. In this case, ORDER BY and LIMIT cannot be used.
+
+however there is a solution on this link: https://github.com/sumonst21/mysql-snippets/blob/master/usage-of-update-and-limit
