@@ -1,0 +1,4 @@
+UPDATE    targetTable t,
+          sourceTable s
+SET       targetTable.targetColumn = sourceTable.sourceColumn
+WHERE     t.matchingColumn = s.matchingColumn
